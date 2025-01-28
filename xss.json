@@ -1,0 +1,7 @@
+{
+    "url": "https://raw.githubusercontent.com/kahledrahaus/poc-xss-swagger/refs/heads/main/xss.yaml",
+    "urls": [{
+        "url": "https://raw.githubusercontent.com/kahledrahaus/poc-xss-swagger/refs/heads/main/xss.yaml",
+        "name": "Foo"
+    }]
+}
