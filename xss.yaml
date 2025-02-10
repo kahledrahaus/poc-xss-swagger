@@ -1,55 +1,47 @@
 swagger: '2.0'
 info:
-  title: Comercio de Bitcoins para funcionarios internos
+  title: Sistema de Gerenciamento de Usuários
   description: |
     <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
-  version: production
-basePath: /JSSResource/
+  version: 1.0.0
+basePath: /api/v1
 produces:
-  - application/xml
   - application/json
 consumes:
-  - application/xml
   - application/json
 security:
   - basicAuth: []
 paths:
-  /compraBitcoin:
-    post:
+  /users:
+    get:
+      summary: Lista de usuários
+      description: |
+        Endpoint para listar todos os usuários.
       responses:
         '200':
-          description: No response was specified
+          description: Operação realizada com sucesso
       tags:
-        - compraBitcoin
-      operationId: findAccounts
-      summary: Compre com um clique
-  '/accounts/groupid/{id}':
+        - Usuários
+      operationId: listUsers
+  '/users/{userId}':
     delete:
       parameters:
         - description: |
             <form><math><mtext></form><form><mglyph><svg><mtext><TESTE><path id="</TESTE><img onerror=alert(document.cookie) src=1>"></form>
-
           format: int64
           in: path
-          name: id
+          name: userId
           required: true
           type: integer
       responses:
         '200':
-          description: No response was specified
+          description: Usuário excluído com sucesso
       tags:
-        - compraBitcoin
-      operationId: deleteGroupById
-      summary: Delete seus rastros
+        - Usuários
+      operationId: deleteUserById
+      summary: Excluir usuário por ID
 definitions:
-  '':
-    properties:
-      id:
-        format: int64
-        type: integer
-      name:
-        type: string
-  Account:
+  User:
     properties:
       id:
         format: int64
@@ -60,5 +52,5 @@ securityDefinitions:
   basicAuth:
     type: basic
 tags:
-  - description: Apenas bitcoin e etherium são aceitas
-    name: Venda de Bitcoins 100% Seguro !!!
+  - description: Operações relacionadas a usuários
+    name: Gerenciamento de Usuários
